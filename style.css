@@ -25,7 +25,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: #1E1E21;
+  background: transparent;
   padding: 10px 20px;
 }
 
