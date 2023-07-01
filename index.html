@@ -1,72 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>siteninjas.io</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="../custom-scripts.js" defer></script>
-  </head>
-  <body>
-    <header id="header" class="sticky">
-      <nav class="nav container">
-        <div class="logo-nav">
-          <img src="ninjaontop.png" class="nav_logo" alt="Logo" />
-          
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>siteninjas.io</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="../custom-scripts.js" defer></script>
+</head>
+<body>
+  <header id="header" class="sticky">
+    <nav class="nav container">
+      <div class="logo-nav">
+        <img src="ninjaontop.png" class="nav_logo" alt="Logo" />
+      </div>
+
+      <ul class="menu_items">
+        <li><a href="#" class="nav_link">Home</a></li>
+        <li><a href="https://siteninjas.as.me/" class="nav_link">Pricing</a></li>
+        <li><a href="about.html" class="nav_link" target="_blank">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="row container">
+        <div class="column">
+          <h3 style="margin-bottom: 10px;">Boost your business with a custom-built website.</h3>
+          <ul class="features">
+            <li><span class="check">&#10003;</span> Custom Design</li>
+            <li><span class="check">&#10003;</span> Responsive Designs</li>
+            <li><span class="check">&#10003;</span> Search Engine Optimization </li>
+            <li><span class="check">&#10003;</span> Scalability</li>
+            <li><span class="check">&#10003;</span> Fast Delivery</li>
+          </ul>
+          <div class="site-message">
+            <p>click the little ninja to get started. <a class="just-sites-a" href="https://siteninjas.as.me/"><img class="click-here" src="correct_blue_fav.png"><span class="message-bubble">Let's Go!</span></a></p>
+          </div>          
+         
         </div>
-
-        <ul class="menu_items">
-          <img src="/times.svg" alt="Menu Toggle" id="menu_toggle" />
-          <li><a href="#" class="nav_link">Home</a></li>
-          <li><a href="https://siteninjas.as.me/" class="nav_link">Pricing</a></li>
-          <li><a href="about.html" class="nav_link" target="_blank">About Us</a></li>
-        </ul>
-        <img src="/bars.svg" alt="Menu Toggle" id="menu_toggle" />
-      </nav>
-    </header>
-
-    <main>
-      <section class="hero">
-        <div class="row container">
-          <div class="column">
-            <h2 class="shrink-on-scroll">Unlock Your Business's Potential with a Professional Website!</h2>
-            <p class="shrink-on-scroll">
-              Building your own site can be a frustrating and time-consuming process. A professionally designed website ensures credibility, functionality, and a seamless user experience.
-            </p>
-            <div class="buttons">
-              <a href="https://siteninjas.as.me/" class="btn price">Pricing</a>
-             <a href="https://tawk.to/chat/649b9591cc26a871b02510ff/1h3vs0gd0"><button class="btn">Contact Us</button></a>
-            </div>
-          </div>
-          <div class="column">
-            <img src="/landingimage.png" alt="Hero Image" class="hero_img" />
-          </div>
+        
+        <div class="column">
+          <img style="width: 450px;" src="landingimage.png" alt="Hero Image" class="hero_img" />
         </div>
-        <img src="/bg-bottom-hero.png" alt="Background Image" class="curveImg" />
-      </section>
-    </main>
-    
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/649b9591cc26a871b02510ff/1h3vs0gd0';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+      </div>
+      <img src="bg-bottom-hero.png" alt="Background Image" class="curveImg" />
+    </section>
+  </main>
 
-<script src="script.js"></script>
-    <script>
-      const header = document.querySelector("header");
-      const menuToggler = document.querySelectorAll("#menu_toggle");
+  <!-- Start of Tawk.to Script -->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/649b9591cc26a871b02510ff/1h3vs0gd0';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+  <!-- End of Tawk.to Script -->
 
-      menuToggler.forEach((toggler) => {
-        toggler.addEventListener("click", () => header.classList.toggle("showMenu"));
-      });
-    </script>
-  </body>
+  <script src="script.js"></script>
+  <script>
+    const header = document.querySelector("header");
+    const menuToggle = document.getElementById("menu_toggle");
+    const menuToggleMobile = document.getElementById("menu_toggle_mobile");
+
+    menuToggle.addEventListener("click", () => header.classList.toggle("showMenu"));
+    menuToggleMobile.addEventListener("click", () => header.classList.toggle("showMenu"));
+  </script>
+</body>
 </html>
