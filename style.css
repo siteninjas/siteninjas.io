@@ -6,7 +6,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  font-size: calc(8px * .5%);
+  color: #fff;
 }
 
 main {
@@ -26,13 +26,11 @@ header {
   width: 100%;
   z-index: 1000;
   background: #1E1E21;
+  padding: 10px 20px;
 }
+
 .sticky {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
   transition: top 0.3s ease;
   margin-bottom: 16px;
 }
@@ -45,7 +43,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 60px;
   width: 100%;
   z-index: 1000;
 }
@@ -57,7 +54,7 @@ header {
 
 .nav_logo {
   width: 150px;
-  height: 150px;
+  height: auto;
   margin-right: 10px;
   margin-bottom: 10px;
 }
@@ -74,14 +71,12 @@ a {
   text-decoration: none;
 }
 
-
 .hero {
   position: relative;
   width: 100%;
   background: url(images/bg-dot.png), url(images/bg-dot.png), url(images/bg-round.png), url(images/bg-tree.png);
   background-position: 10px 10px, bottom 215px right 10px, left 55% top -1%, left 45% bottom -1px;
   background-repeat: no-repeat;
-  padding: 50px 20px;
   box-sizing: border-box;
 }
 
@@ -97,24 +92,14 @@ a {
   display: flex;
   align-items: center;
   min-height: 100vh;
-  padding: 0 100px;
   gap: 30px;
   justify-content: space-between;
 }
 
-.hero h2,
-.hero p {
-  color: #fff;
-}
-
-.hero h2 {
-  font-size: 2em;
-  margin-bottom: 16px;
-}
-
-.hero .column {
-  width: 100dvw;
-  margin-top: 200px;
+@media (min-width: 768px) {
+  .hero .container {
+    padding: 0 100px;
+  }
 }
 
 .buttons {
@@ -146,88 +131,114 @@ a {
   background-color: #fff;
   color: #333;
 }
-
-.hero_img {
-  width: 100%;
-  z-index: 10;
-  position: relative;
-  margin-left: 300px;
+.features {
+  list-style: none;
 }
 
-#menu_toggle {
-  display: none;
+.features li {
+  color: white;
+  margin-bottom: 10px;
 }
 
-@media (max-width: 860px) {
-  #menu_toggle {
-    display: block;
-  }
-
-  .nav {
-    padding: 10px 20px;
-    background-color: #fff;
-  }
-
-  .menu_items {
-    position: fixed;
-    top: 0;
-    width: 260px;
-    background-color: #fff;
-    height: 100%;
-    left: -100%;
-    padding: 50px 30px 30px;
-    flex-direction: column;
-    transition: all 0.5s ease;
-  }
-
-  .showMenu .menu_items {
-    left: 0;
-  }
-
-  a {
-    color: #333;
-  }
-
-  #menu_toggle {
-    width: 20px;
-    cursor: pointer;
-  }
-
-  .menu_items #menu_toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-
-  .hero {
-    padding-top: 130px;
-  }
-
-  .hero .container {
-    flex-direction: column;
-    padding: 0 20px;
-    justify-content: center;
-  }
-
-  .hero .column {
-    width: 100%;
-  }
+.check {
+  color: #0cc0df;
+  margin-right: 5px;
 }
 
-@media (max-width: 600px) {
-  .hero {
-    padding-top: 80px;
-  }
-
-  .hero h2 {
-    font-size: 26px;
-  }
-
-  .buttons {
-    justify-content: center;
-  }
-
-  .btn {
-    padding: 10px 16px;
-  }
+.site-message {
+  display: inline-block;
+  margin-top: 10px;
 }
+
+.site-message p {
+  margin: 0;
+}
+
+.site-message .just-sites-a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.site-message .click-here {
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+}
+.site-message {
+	position: relative;
+  }
+  
+  .message-bubble {
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #0cc0df;
+	color: #fff;
+	font-size: 12px;
+	padding: 6px 10px;
+	border-radius: 4px;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease-in-out;
+  }
+  
+  .message-bubble::before {
+	content: "";
+	position: absolute;
+	bottom: -8px;
+	left: 50%;
+	transform: translateX(-50%) rotate(45deg);
+	width: 15px;
+	height: 15px;
+	margin-top: 3px;
+	background-color: #0cc0df;
+  }
+  
+  
+  .click-here {
+	width: 50px;
+	height: 50px;
+	transition: transform 0.3s ease-in-out;
+  }
+  
+  .just-sites-a {
+	position: relative;
+	display: inline-block;
+  }
+  
+  .just-sites-a:hover .click-here {
+	transform: scale(1.2) rotate(360deg);
+  }
+  
+  .just-sites-a:hover .message-bubble {
+	opacity: 1;
+	visibility: visible;
+  }
+  
+
+.site-message p {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  text-align: cen;
+ 
+}
+
+.click-here {
+	width: 40px;
+	height: 40px;
+	transition: transform 0.3s ease-in-out;
+  }
+  
+  .just-sites-a:hover .click-here {
+	transform: scale(1.3) rotate(360deg);
+  }
+
+
+.site-message .click-here {
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+}
+ 
