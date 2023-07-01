@@ -99,6 +99,7 @@ a {
 @media (min-width: 768px) {
   .hero .container {
     padding: 0 100px;
+	  font-size: calc(8px + 5%)
   }
 }
 
