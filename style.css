@@ -1,19 +1,16 @@
 /* Import Google font - Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
-/* Reset default browser styles */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Apply a modern and clean font */
 body {
   font-family: Arial, sans-serif;
 }
 
-/* Style the header section */
 header {
   background-color: #f5f5f5;
   padding: 20px;
@@ -26,6 +23,11 @@ header {
 
 .hero {
   margin-top: 30px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
 }
 
 .hero p {
@@ -45,10 +47,9 @@ header {
 }
 
 .cta-button:hover {
-  background-color: #0ab8df;
+  background-color: #0999b8;
 }
 
-/* Style the pricing section */
 #pricing {
   background-color: #f5f5f5;
   padding: 40px 0;
@@ -60,14 +61,14 @@ header {
   width: 300px;
   padding: 20px;
   margin: 20px;
-  background-color: #f9f9f9;
+  background-color: #fff;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.3s ease;
 }
 
 .pricing-card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .pricing-card h3 {
@@ -88,16 +89,22 @@ header {
 
 .features li {
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 
-/* Style the footer section */
+.features li::before {
+  content: "\2713";
+  color: #0cc0df;
+  margin-right: 10px;
+}
+
 footer {
   background-color: #333;
   color: #fff;
   padding: 20px;
   text-align: center;
 }
-
 
 
 
